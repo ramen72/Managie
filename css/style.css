@@ -1,3 +1,4 @@
+/* common CSS start */
 *{
     padding: 0;
     margin: 0;
@@ -14,6 +15,8 @@
     --color6: #FFC236;
     --color7: #000000;
     --color8: rgba(255, 255, 255, 0.16);
+    --color9: #ffffff;
+    --btnBorder: rgba(255, 255, 255, 0.40);
 }
 body{
     font-family: var(--inter);
@@ -32,3 +35,87 @@ ol,ul{
 span{
     display: inline-block;
 }
+.dFlex{
+    display: flex;
+}
+/* common CSS end */
+
+/* Nav Start */
+#nav{
+    background-color: var(--color1);
+}
+.navbar-expand-lg .navbar-collapse {
+    justify-content: space-between;
+}
+.navbar-expand-lg .navbar-collapse .navbar-nav{
+    gap: 30px;
+}
+.nav-link {
+    text-transform: capitalize;
+    color: var(--color9);
+    position: relative;
+}
+.nav-link::after{
+    content: "";
+    width: 0;
+    height: 1px;
+    background-color: var(--color9);
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    transition: all linear 0.3s;
+    -webkit-transition: all linear 0.3s;
+    -moz-transition: all linear 0.3s;
+    -ms-transition: all linear 0.3s;
+    -o-transition: all linear 0.3s;
+}
+.nav-link:hover{
+    color: var(--color9);
+}
+.nav-link:hover::after{
+    width: 84%;
+}
+
+
+
+
+
+
+
+
+
+#nav .dFlex{
+    align-items: center;
+    gap: 5px;
+}
+#nav .dFlex .navBtn{
+    font-size: 18px;
+    font-weight: 500;
+    color: var(--color9);
+    letter-spacing: -0.45px;
+    padding: 16px 40px;
+    border: 1px solid transparent;
+    border-radius: 30px;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    -ms-border-radius: 30px;
+    -o-border-radius: 30px;
+    transition: all linear 0.3s;
+    -webkit-transition: all linear 0.3s;
+    -moz-transition: all linear 0.3s;
+    -ms-transition: all linear 0.3s;
+    -o-transition: all linear 0.3s;
+}
+#nav .dFlex .navBtn.active{
+    border-color: var(--color9);
+
+}
+#nav .dFlex .navBtn:hover{
+    border-color: var(--color9);
+}
+/* Nav End */
