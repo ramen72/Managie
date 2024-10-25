@@ -1,10 +1,11 @@
 /* common CSS start */
-*{
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
-:root{
+
+:root {
     --inter: "Inter", sans-serif;
     --space: "Space Grotesk", sans-serif;
     --color1: #394792;
@@ -18,44 +19,55 @@
     --color9: #ffffff;
     --btnBorder: rgba(255, 255, 255, 0.40);
 }
-body{
+
+body {
     font-family: var(--inter);
     font-size: 14px;
     font-weight: 400;
     font-style: normal;
     line-height: 0.80;
 }
-a{
+
+a {
     display: inline-block;
     text-decoration: none;
 }
-ol,ul{
+
+ol,
+ul {
     list-style-type: none;
 }
-span{
+
+span {
     display: inline-block;
 }
-.dFlex{
+
+.dFlex {
     display: flex;
 }
+
 /* common CSS end */
 
 /* Nav Start */
-#nav{
+#nav {
     background-color: var(--color1);
 }
+
 .navbar-expand-lg .navbar-collapse {
     justify-content: space-between;
 }
-.navbar-expand-lg .navbar-collapse .navbar-nav{
+
+.navbar-expand-lg .navbar-collapse .navbar-nav {
     gap: 30px;
 }
+
 .nav-link {
     text-transform: capitalize;
     color: var(--color9);
     position: relative;
 }
-.nav-link::after{
+
+.nav-link::after {
     content: "";
     width: 0;
     height: 1px;
@@ -74,17 +86,21 @@ span{
     -ms-transition: all linear 0.3s;
     -o-transition: all linear 0.3s;
 }
-.nav-link:hover{
+
+.nav-link:hover {
     color: var(--color9);
 }
-.nav-link:hover::after{
+
+.nav-link:hover::after {
     width: 84%;
 }
-#nav .dFlex{
+
+#nav .dFlex {
     align-items: center;
     gap: 5px;
 }
-#nav .dFlex .navBtn{
+
+#nav .dFlex .navBtn {
     font-size: 18px;
     font-weight: 500;
     color: var(--color9);
@@ -102,17 +118,24 @@ span{
     -ms-transition: all linear 0.3s;
     -o-transition: all linear 0.3s;
 }
-#nav .dFlex .navBtn.active{
+
+#nav .dFlex .navBtn.active {
     border-color: var(--color9);
 
 }
-#nav .dFlex .navBtn:hover{
+
+#nav .dFlex .navBtn:hover {
     border-color: var(--color9);
 }
+
 /* Nav End */
 
 /* Banner Start */
-#banner .bannerTitle{
+#banner {
+    background-color: var(--color1);
+}
+
+#banner .bannerTitle {
     max-width: 670px;
     font-family: var(--space);
     font-size: 64px;
@@ -150,3 +173,45 @@ span{
 
 
 
+
+.bannerP {
+    margin-top: 32px;
+    font-size: 18px;
+    color: var(--color9);
+    line-height: 170%;
+    letter-spacing: -4.5%;
+}
+
+.btn_wrap {
+    display: flex;
+    gap: 24px;
+    margin-top: 40px;
+    margin-bottom: 60px;
+}
+
+.btn_wrap a {
+    width: 156px;
+    height: 58px;
+    display: inline-flex;
+    align-items: center;
+    padding: 18px 32px;
+    border-radius: 30px;
+    font-size: 18px;
+    text-align: center;
+    font-weight: 500;
+    letter-spacing: -0.81px;
+    color: var(--color9);
+    border: 1px solid var(--btnBorder);
+    transition: all linear 0.3s;
+}
+.btn_wrap a:hover{
+    background-color: var(--color9);
+    color: var(--color4);
+}
+
+.btn_wrap .active{
+    background: var(--color9);
+    color: var(--color4);
+}
+
+/* Banner end */
